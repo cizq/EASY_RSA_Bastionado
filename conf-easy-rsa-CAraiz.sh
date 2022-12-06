@@ -18,7 +18,30 @@ do
            ./easyrsa build-ca
             ;;
         "Opcion 3")
-            echo "you chose choice $REPLY which is $opt"
+             echo "Creando la entidad de certificación";
+			 echo "Generando archivo vars";
+			 echo "Introduzca los valores entre comillas dobles";
+			 cd /home/equipo1/easy-rsa/;
+			 read -p "COUNTRY?" country;
+			 echo set_var EASYRSA_REQ_CONTRY $country >> vars;
+			 read -p "PROVINCE?" province;
+			 echo set_var EASYRSA_REQ_PROVINCE $province >> vars;
+			 read -p "CITY?" city;
+			 echo set_var EASYRSA_REQ_CITY $city >> vars;
+			 read -p "ORGANIZATION?" organization;
+			 echo set_var EASYRSA_REQ_ORG $organization >> vars;
+			 read -p "EMAIL?" email;
+			 echo set_var EASYRSA_REQ_EMAIL $email >> vars;
+			 read -p "ORGANIZATIONAL UNIT?" ou;
+			 echo set_var EASYRSA_REQ_OU $ou >> vars;
+			 read -p "ALGO?" algo;
+			 echo set_var EASYRSA_ALGO $algo >> vars;
+			 read -p "DIGEST?" digest;
+			 echo set_var EASYRSA_DIGEST $digest >> vars;
+			 clear
+			 echo "El fichero vars generado es el siguiente: \n";
+			 cat vars;
+			 echo "\nAhora debe geneerar el certificado público de la CA";;
             ;;
         "Cerrar")
             break
