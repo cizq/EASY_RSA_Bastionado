@@ -1,7 +1,7 @@
 #!/bin/bash
 # Bash Menu Script Example
 PS3='Please enter your choice: '
-options=("Opcion 1" "Opcion 2" "Opcion 3" "Cerrar")
+options=("Opcion 1" "Opcion 2" "Opcion 3"  "Opcion 4" "Cerrar")
 select opt in "${options[@]}"
 do
     case $opt in
@@ -43,6 +43,10 @@ do
 			 cat vars;
 			 echo "\nAhora debe geneerar el certificado público de la CA";;
             ;;
+	"Opcion 4")
+	echo "Generando certificado público y clave privada.";
+			 cd /home/equipo1/easy-rsa/;
+			 sudo ./easyrsa build-ca;;
         "Cerrar")
             break
             ;;
