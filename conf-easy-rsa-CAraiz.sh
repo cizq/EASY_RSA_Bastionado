@@ -8,7 +8,7 @@ do
         "Opcion 1")
             echo "Crear estructura y enlaces simbolicos"
             mkdir /home/$User/easy-rsa
-            lsn -s /usr/share/easy-rsa/* /home/$User/easy-rsa/
+            ln -s /usr/share/easy-rsa/* /home/equipo1/easy-rsa;
             cd /home/$User/easy-rsa
 	    ./easyrsa init-pki
             ;;
