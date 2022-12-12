@@ -31,7 +31,7 @@ do
            echo set_var EASYRSA_REQ_PROVINCE $province >>vars;
            read -p "CITY?" city;
            echo set_var EASYRSA_REQ_CITY $city >> vars;
-           read -p "ORGANIZATION?" organitazation;
+           read -p "ORGANIZATION?" organitzation;
            echo set_var EASYRSA_REQ_ORG $organization >> vars;
            read -p "EMAIL?" email;
            echo set_var EASYRSA_REQ_EMAIL $email >> vars;
